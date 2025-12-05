@@ -4,3 +4,5 @@ build/
 *.exe
 .DS_Store
 
+# Ignore compiled controller binary
+controllers/epuck_go_forward/epuck_go_forward

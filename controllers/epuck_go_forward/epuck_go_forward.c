@@ -41,11 +41,12 @@ int main(int argc, char **argv) {
    * Perform simulation steps of TIME_STEP milliseconds
    * and leave the loop when the simulation is over
    */
-    wb_motor_set_position(left_motor, INFINITY);
-    wb_motor_set_position(right_motor, INFINITY);   
+
+    wb_motor_set_position(left_motor, 6.28);
+    wb_motor_set_position(right_motor, 6.28);   
     
-    wb_motor_set_velocity(left_motor, 0.1*MAX_SPEED);
-    wb_motor_set_velocity(right_motor, 0.1*MAX_SPEED);
+    wb_motor_set_velocity(left_motor, MAX_SPEED);
+    wb_motor_set_velocity(right_motor,MAX_SPEED);
      
   while (wb_robot_step(TIME_STEP) != -1) {
     /*
